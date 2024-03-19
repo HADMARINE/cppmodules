@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:18:22 by lhojoon           #+#    #+#             */
-/*   Updated: 2023/12/22 18:16:50 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/03/19 12:09:35 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include "Contact.hpp"
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <iomanip>
+#include <limits>
 
 class PhoneBook
 {
@@ -28,8 +31,11 @@ public:
     void search();
 private:
     Contact contacts[8];
-    int count = 0;
+    int count;
     void shift();
+    void _printWithLengthLimit(std::string str);
+    void _printBrief();
+    int _readInput() const;
 };
 
 #endif

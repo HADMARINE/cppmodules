@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 17:18:55 by lhojoon           #+#    #+#             */
-/*   Updated: 2023/12/22 17:48:07 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/03/19 11:12:03 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ public:
     std::string getLastName();
     std::string getNickname();
     std::string getPhoneNumber();
-    std::string getDarkestSecret();
 private:
     std::string firstName;
     std::string lastName;
