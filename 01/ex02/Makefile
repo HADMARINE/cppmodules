@@ -6,11 +6,11 @@
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/22 15:42:58 by lhojoon           #+#    #+#              #
-#    Updated: 2024/03/19 19:50:56 by lhojoon          ###   ########.fr        #
+#    Updated: 2024/03/20 02:16:24 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = string
 CPP = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
