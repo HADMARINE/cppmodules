@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 15:53:14 by lhojoon           #+#    #+#             */
-/*   Updated: 2023/12/22 17:21:50 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/03/19 19:30:19 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,12 @@
 
 class Zombie
 {
+public:
+    ~Zombie();
+    void announce();
+    void setName(std::string name);
 private: 
     std::string name;
-public:
-    Zombie();
-    Zombie(const Zombie &zombie);
-    ~Zombie();
-    Zombie &operator=(const Zombie &zombie);
-    void announce();
 };
-
-Zombie::Zombie(/* args */)
-{
-}
-
-Zombie::~Zombie()
-{
-}
 
 #endif

@@ -5,29 +5,32 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/19 13:31:49 by lhojoon           #+#    #+#              #
-#    Updated: 2024/03/19 19:26:42 by lhojoon          ###   ########.fr        #
+#    Created: 2023/12/22 15:42:58 by lhojoon           #+#    #+#              #
+#    Updated: 2024/03/19 19:29:53 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = account
+NAME = zombie
 CPP = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 DIR = .
-SRCS_RAW =	Account.cpp \
-			tests.cpp
+SRCS_RAW =	main.cpp \
+			Zombie.cpp \
+			zombieHorde.cpp
 SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:cpp=o)
 INCLUDES = -I.
 
+
 all: $(NAME)
 $(NAME): $(OBJS)
-	$(CPP) $(CFLAGS) $(OBJS) $(DEBUG) -o $(NAME)
-%.o: %.cpp
-	$(CPP) -c $< -o $@ $(CFLAGS) $(INCLUDES) $(DEBUG)
+	$(CPP) $(OBJS) $(DEBUG) -o $(NAME)
 clean:
 	rm $(OBJS) -f
 fclean: clean
 	rm $(NAME) -f
 re: fclean all
+
+%.o: %.cpp
+	$(CPP) -c $< -o $@ $(CFLAGS) $(INCLUDES) $(DEBUG)
