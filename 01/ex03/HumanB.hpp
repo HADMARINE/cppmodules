@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:13:38 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/03/20 12:22:07 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/03/20 15:03:16 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 class HumanB
 {
 public:
+    HumanB(std::string);
     std::string getName();
     void setName(std::string);
+    Weapon* getWeapon();
+    void setWeapon(Weapon&);
+    void attack();
 private:
     std::string name;
-    Weapon weapon;
+    Weapon *weapon;
 };
