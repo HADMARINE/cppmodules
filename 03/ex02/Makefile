@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/05 17:33:34 by lhojoon           #+#    #+#              #
+#    Updated: 2024/04/05 21:44:30 by lhojoon          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = a.out
+CPP = c++
+CFLAGS = -std=c++98 -Wall -Wextra -Werror
+DEBUG = -g
+
+DIR = .
+SRCS_RAW =	main.cpp \
+			ClapTrap.cpp \
+			ScavTrap.cpp
+SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
+OBJS = $(SRCS:cpp=o)
+INCLUDES = -I.
+
+
+all: $(NAME)
+$(NAME): $(OBJS)
+	$(CPP) $(OBJS) $(DEBUG) -o $(NAME)
+clean:
+	rm $(OBJS) -f
+fclean: clean
+	rm $(NAME) -f
+re: fclean all
+
+%.o: %.cpp
+	$(CPP) -c $< -o $@ $(CFLAGS) $(INCLUDES) $(DEBUG)

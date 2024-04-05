@@ -5,26 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 16:39:46 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/03/20 22:37:08 by lhojoon          ###   ########.fr       */
+/*   Created: 2024/04/05 17:40:45 by lhojoon           #+#    #+#             */
+/*   Updated: 2024/04/05 21:36:15 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-#include <iostream>
+#include "ClapTrap.hpp"
 
 int main()
 {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
-
+    ClapTrap clap_trap("ClapTrap");
+    clap_trap.setAttackDamage(10);
+    clap_trap.setHitPoints(0);
+    clap_trap.attack("target");
     return (0);
 }

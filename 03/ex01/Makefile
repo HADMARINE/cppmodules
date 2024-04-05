@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/20 16:28:38 by lhojoon           #+#    #+#              #
-#    Updated: 2024/03/20 16:50:48 by lhojoon          ###   ########.fr        #
+#    Created: 2024/04/05 17:33:34 by lhojoon           #+#    #+#              #
+#    Updated: 2024/04/05 21:44:30 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ DEBUG = -g
 
 DIR = .
 SRCS_RAW =	main.cpp \
-			Fixed.cpp
+			ClapTrap.cpp \
+			ScavTrap.cpp
 SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:cpp=o)
 INCLUDES = -I.
