@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bsp.cpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 12:41:39 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/03/27 12:47:06 by lhojoon          ###   ########.fr       */
+/*   Created: 2024/04/05 21:36:41 by lhojoon           #+#    #+#             */
+/*   Updated: 2024/04/08 12:20:36 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#include "FragTrap.hpp"
 
-bool bsp(Point const a, Point const b, Point const c, point const point)
+int main()
 {
-    
+    FragTrap fragtrap("Fragtrap 1");
+    fragtrap.highFiveGuys();
+    fragtrap.highFiveGuys();
+    fragtrap.highFiveGuys();
+    fragtrap.highFiveGuys();
+    return (0);
 }

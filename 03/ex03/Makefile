@@ -6,7 +6,7 @@
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/05 17:33:34 by lhojoon           #+#    #+#              #
-#    Updated: 2024/04/08 12:05:09 by lhojoon          ###   ########.fr        #
+#    Updated: 2024/04/08 13:30:13 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ DEBUG = -g
 DIR = .
 SRCS_RAW =	main.cpp \
 			ClapTrap.cpp \
-			FragTrap.cpp
+			FragTrap.cpp \
+			ScavTrap.cpp \
+			DiamondTrap.cpp
 SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:cpp=o)
 INCLUDES = -I.
