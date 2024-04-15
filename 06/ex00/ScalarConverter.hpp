@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:05:10 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 10:35:26 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/04/15 10:47:18 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 
 typedef enum e_type {
-    TYPE_CHAR = 0, TYPE_INT = 1, TYPE_FLOAT = 2, TYPE_DOUBLE = 3, TYPE_INVALID = 4, TYPE_INF = 5, TYPE_NAN = 6
+    TYPE_CHAR = 0, TYPE_INT = 1, TYPE_FLOAT = 2, TYPE_DOUBLE = 3, TYPE_INVALID = 4
 } t_type;
 
 class ScalarConverter {
@@ -28,8 +28,6 @@ private:
     static void convertFromFloat(std::string &);
     static void convertFromDouble(std::string &);
     static void convertFromInvalid(std::string &);
-    static void convertFromInf(std::string &);
-    static void convertFromNan(std::string &);
 public:
     static void convert(const char *input);
 };

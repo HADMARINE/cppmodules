@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:07:40 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 10:41:00 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/04/15 10:47:29 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,6 @@ const char *ScalarConverter::getTypeName(t_type type) {
             return "float";
         case TYPE_DOUBLE:
             return "double";
-        case TYPE_INVALID:
-            return "invalid";
-        case TYPE_INF:
-            return "infinity";
         case TYPE_NAN:
             return "nan";
         default:
@@ -43,14 +39,6 @@ t_type ScalarConverter::getType(std::string & str) {
     bool containsOneDot = false;
     bool endsWithF = false;
     bool inOperators = true;
-
-    if (str == "nan" || str == "+nan" || str == "-nan") {
-        return TYPE_NAN;
-    }
-
-    if (str == "-inff" || str == "+inff" || str == "inff" || str == "-inf" || str == "+inf" || str == "inf") {
-        return TYPE_INF;
-    }
 
     if (str.length() == 3 && str.at(0) == '\'' && str.at(2) == '\'') {
         return TYPE_CHAR;
@@ -170,28 +158,6 @@ void ScalarConverter::convertFromInvalid(std::string & str) {
     printImpossible();
 }
 
-void ScalarConverter::convertFromInf(std::string & str) {
-    if (str.at(0) == '-') {
-        std::cout << "char: impossible" << std::endl;
-        std::cout << "int: impossible" << std::endl;
-        std::cout << "float: -inff" << std::endl;
-        std::cout << "double: -inf" << std::endl;
-    } else {
-        std::cout << "char: impossible" << std::endl;
-        std::cout << "int: impossible" << std::endl;
-        std::cout << "float: inff" << std::endl;
-        std::cout << "double: inf" << std::endl;
-    }
-}
-
-void ScalarConverter::convertFromNan(std::string & str) {
-    (void)str;
-    std::cout << "char: impossible" << std::endl;
-    std::cout << "int: impossible" << std::endl;
-    std::cout << "float: nanf" << std::endl;
-    std::cout << "double: nan" << std::endl;
-}
-
 void ScalarConverter::convert(const char *input) {
     std::string s(input);
     // std::cout << ScalarConverter::getTypeName(ScalarConverter::getType(s)) << std::endl;
@@ -208,12 +174,6 @@ void ScalarConverter::convert(const char *input) {
             break;
         case TYPE_DOUBLE:
             ScalarConverter::convertFromDouble(s);
-            break;
-        case TYPE_INF:
-            ScalarConverter::convertFromInf(s);
-            break;
-        case TYPE_NAN:
-            ScalarConverter::convertFromNan(s);
             break;
         case TYPE_INVALID:
         default:
