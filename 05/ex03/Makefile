@@ -6,7 +6,7 @@
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/05 17:33:34 by lhojoon           #+#    #+#              #
-#    Updated: 2024/04/09 16:51:08 by lhojoon          ###   ########.fr        #
+#    Updated: 2024/04/15 10:13:59 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS_RAW =	main.cpp \
 			AForm.cpp \
 			PresidentialPardonForm.cpp \
 			ShrubberyCreationForm.cpp \
-			RobotomyRequestForm.cpp
+			RobotomyRequestForm.cpp \
+			Intern.cpp
 SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:cpp=o)
 INCLUDES = -I.
