@@ -6,7 +6,7 @@
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 15:03:51 by lhojoon           #+#    #+#              #
-#    Updated: 2024/04/15 17:56:22 by lhojoon          ###   ########.fr        #
+#    Updated: 2024/04/15 18:08:03 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ CFLAGS = -std=c++98 -Wall -Wextra -Werror
 DEBUG = -g
 
 DIR = .
-SRCS_RAW =	main.cpp \
-			Span.cpp
+SRCS_RAW =	main.cpp
 SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:cpp=o)
 INCLUDES = -I.
