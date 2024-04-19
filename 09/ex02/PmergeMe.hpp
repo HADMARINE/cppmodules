@@ -6,21 +6,29 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:07:50 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/19 12:10:23 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/04/19 19:53:32 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PMERGEME_HPP
 #define PMERGEME_HPP
 
+#include <deque>
+#include <list>
+#include <ctime>
+#include <cstdlib>
+
 class PmergeMe {
-public:
+private:
     PmergeMe();
+public:
+    PmergeMe(int argc, char **argv);
     PmergeMe(const PmergeMe &cpy) { operator=(cpy); };
     PmergeMe &operator=(const PmergeMe &);
     ~PmergeMe() {};
     
-    void mergeMe();
+    void sortDeque(std::deque<int> &);
+    void sortList(std::list<int> &);
 };
 
 #endif

@@ -6,10 +6,13 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:02:14 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/19 12:02:18 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/04/19 20:03:55 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main() {
+#include "PmergeMe.hpp"
+
+int main(int ac, char **av) {
+    PmergeMe me(ac - 1, av + 1);
     return 0;
 }

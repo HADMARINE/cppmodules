@@ -6,17 +6,18 @@
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 15:03:51 by lhojoon           #+#    #+#              #
-#    Updated: 2024/04/19 12:02:06 by lhojoon          ###   ########.fr        #
+#    Updated: 2024/04/19 20:03:21 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RPN
+NAME = PmergeMe
 CPP = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 DEBUG = -g
 
 DIR = .
-SRCS_RAW =	main.cpp
+SRCS_RAW =	main.cpp \
+			PmergeMe.cpp
 SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:cpp=o)
 INCLUDES = -I.
