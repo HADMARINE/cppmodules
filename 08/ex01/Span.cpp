@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:47:04 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/12 00:49:07 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/12 00:53:58 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,13 @@ void Span::addNumber(int n) {
     }
     _arr[_len++] = n;
     std::sort(_arr.begin(), _arr.begin() + _len);
+}
+
+void Span::addNumber(std::vector<int>::iterator start, std::vector<int>::iterator end) {
+    while (start < end) {
+        addNumber(*start);
+        start++;
+    }
 }
 
 int Span::shortestSpan() {

@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:49:01 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/12 00:42:12 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/12 00:54:11 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@
 #include <algorithm>
 
 class Span {
-public:
+private:
     std::vector<int> _arr;
     size_t _len;
     size_t _max_len;
-private:
 public:
     Span();
     Span(const Span &copy);
@@ -31,8 +30,7 @@ public:
     Span &operator=(const Span &copy);
     
     void addNumber(int n);
-    
-    void addNumber(typename std::vector<int>::iterator start, std::vector<int>::iterator end);
+    void addNumber(std::vector<int>::iterator start, std::vector<int>::iterator end);
     int shortestSpan();
     int longestSpan();
 
