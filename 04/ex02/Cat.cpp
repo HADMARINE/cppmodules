@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:04:35 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 15:28:29 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 16:02:13 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cat::Cat() {}
 
-Cat::Cat(const Cat &copy) {
+Cat::Cat(const Cat &copy) : Animal(copy) {
     operator=(copy);
 }
 

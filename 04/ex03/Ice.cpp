@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:51:46 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 16:18:32 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 17:00:59 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 Ice::Ice() : AMateria("ice") {}
 
 Ice::~Ice() {}
+
+Ice::Ice(const Ice & copy) : AMateria(copy) { operator=(copy); }
 
 Ice & Ice::operator=(const Ice &cpy) {
     if (this == &cpy)

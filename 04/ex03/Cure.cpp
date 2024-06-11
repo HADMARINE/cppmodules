@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:57:31 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 16:21:44 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 17:01:31 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 Cure::Cure() : AMateria("cure") {}
 
 Cure::~Cure() {}
+
+Cure::Cure(const Cure & copy) : AMateria(copy) { operator=(copy); }
 
 Cure & Cure::operator=(const Cure &cpy)
 {

@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:44:55 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 16:15:02 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 17:02:50 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Ice : public AMateria
 {
 public:
     Ice();
-    Ice(const Ice &cpy) { operator=(cpy); }
+    Ice(const Ice &cpy);
     virtual ~Ice();
     Ice &operator=(const Ice &);
     AMateria *clone() const;

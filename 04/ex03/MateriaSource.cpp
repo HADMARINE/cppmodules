@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:47:18 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 16:18:40 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 17:03:22 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ MateriaSource::MateriaSource() : count(0) {
     for (int i = 0; i < 4; i++)
         materias[i] = NULL;
 }
+
+MateriaSource::MateriaSource(const MateriaSource & copy) { operator=(copy); }
 
 MateriaSource & MateriaSource::operator=(const MateriaSource & copy) {
     if (this == &copy)
