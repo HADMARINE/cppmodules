@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:05:10 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 10:47:18 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 22:47:08 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef enum e_type {
 
 class ScalarConverter {
 private:
+    ScalarConverter();
     static const char *getTypeName(t_type type);
     static t_type getType(std::string & str);
     static void convertFromChar(std::string &);
