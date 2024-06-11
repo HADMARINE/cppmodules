@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 21:37:32 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/05 21:55:51 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 12:54:16 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,15 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& scav_trap)
     this->setAttackDamage(scav_trap.getAttackDamage());
     this->isGuardMode = scav_trap.getIsGuardMode();
     return (*this);
+}
+
+void ScavTrap::attack(const std::string & target)
+{
+    if (this->hit_points <= 0 || this->energy_points <= 0)
+    {
+        std::cout << "ScavTrap " << this->name << " cannot attack." << std::endl;
+        return;
+    }
+    std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attack_damage << " points of damage!" << std::endl;
+    this->energy_points--;
 }

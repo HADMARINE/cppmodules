@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 21:36:41 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 13:55:19 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 13:00:58 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    DiamondTrap trap("Diamond Trap 1");
+    DiamondTrap trap("Diamond_Trap_1");
     trap.whoAmI();
     trap.attack("Enemy 1");
     // trap.takeDamage(10);
