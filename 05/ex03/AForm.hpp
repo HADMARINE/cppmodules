@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:30 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 15:59:13 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 20:12:21 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ private:
     AForm();
 public:
     AForm(const std::string & name, const std::string & target, const int gradeToSign, const int gradeToExecute);
-    AForm(const AForm & cpy) { operator=(cpy); };
+    AForm(const AForm & cpy);
     AForm & operator=(const AForm & cpy);
-    ~AForm();
+    virtual ~AForm();
     
-    const std::string & getName(void) const { return (_name); };
-    const std::string & getTarget(void) const { return (_target); };
-    bool getSigned(void) const { return (_signed); };
-    unsigned short getGradeToSign(void) const { return (_gradeToSign); };
-    unsigned short getGradeToExecute(void) const { return (_gradeToExecute); };
+    const std::string & getName(void) const;
+    const std::string & getTarget(void) const;
+    bool getSigned(void) const;
+    unsigned short getGradeToSign(void) const;
+    unsigned short getGradeToExecute(void) const;
 
     void beSigned(Bureaucrat const & bureaucrat);
     virtual void execute(Bureaucrat const & bureaucrat) const = 0;

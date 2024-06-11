@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:22:02 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 13:27:34 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:17:02 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ Bureaucrat::Bureaucrat(const std::string & name, int grade) {
     _name = name;
     _grade = grade;
 }
+
+Bureaucrat::Bureaucrat(const Bureaucrat & cpy) { operator=(cpy); };
 
 Bureaucrat::~Bureaucrat() {}
 
@@ -74,6 +76,6 @@ const char * Bureaucrat::GradeTooHighException::what() const throw() {
 }
 
 std::ostream & operator<<(std::ostream &o, const Bureaucrat & bureaucrat) {
-    o << bureaucrat.getName() << " ::: grade ::: " << bureaucrat.getGrade() << std::endl;
+    o << bureaucrat.getName() << " - grade : " << bureaucrat.getGrade() << std::endl;
     return (o);
 }

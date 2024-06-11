@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:34:53 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 16:49:04 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:28:31 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", "default", 25, 5) {};
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string & target) : AForm("PresidentialPardonForm", target, 25, 5) {};
+
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm & cpy) : AForm(cpy.getName(), cpy.getTarget(), cpy.getGradeToSign(), cpy.getGradeToExecute()) { operator=(cpy); }
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPardonForm & cpy) {
     if (this == &cpy)

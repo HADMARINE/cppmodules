@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:18:32 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 16:53:49 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:29:22 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShruberryCreationForm", 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string & target) : AForm("ShrubberyCreationForm", target, 145, 137) {};
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {};
+
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & cpy) : AForm(cpy.getName(), cpy.getTarget(), cpy.getGradeToSign(), cpy.getGradeToExecute()) { operator=(cpy); };
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreationForm & cpy) {
     (void)cpy;

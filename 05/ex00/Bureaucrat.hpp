@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:16:07 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 12:43:41 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:04:58 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
     Bureaucrat();
 public:
     Bureaucrat(const std::string & name, int grade);
-    Bureaucrat(const Bureaucrat& cpy) { operator=(cpy); }
+    Bureaucrat(const Bureaucrat& cpy);
     ~Bureaucrat();
     Bureaucrat & operator=(const Bureaucrat &);
 

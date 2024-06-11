@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:46:20 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 16:50:55 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:31:08 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ AForm::AForm(const std::string & name, const std::string & target, int gradeToSi
 }
 
 AForm::~AForm() {}
+
+AForm::AForm(const AForm & cpy) { operator=(cpy); };
 
 AForm & AForm::operator=(const AForm & cpy) {
     if (this == &cpy)
@@ -72,3 +74,13 @@ std::ostream & operator<<(std::ostream &o, const AForm &form) {
     o << "Grade to execute:\t\t" << form.getGradeToExecute() << std::endl;
     return (o);
 }
+
+const std::string & AForm::getName(void) const { return (_name); };
+
+const std::string & AForm::getTarget(void) const { return (_target); };
+
+bool AForm::getSigned(void) const { return (_signed); };
+
+unsigned short AForm::getGradeToSign(void) const { return (_gradeToSign); };
+
+unsigned short AForm::getGradeToExecute(void) const { return (_gradeToExecute); };

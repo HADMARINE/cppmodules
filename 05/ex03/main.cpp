@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:22:13 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 10:13:40 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 20:17:09 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,12 @@ int main()
         b1.executeForm(*f1);
         b1.executeForm(*f2);
         b1.executeForm(*f3);
-        // b2.signForm(f2);
+
+        delete f1;
+        delete f2;
+        delete f3;
+
+        i1.makeForm("Crazy interest rate", "test4");
     } catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }
