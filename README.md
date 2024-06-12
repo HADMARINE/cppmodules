@@ -1,2 +1,2 @@
 ### TODO
-Check wrong implementation in header file (eliminatory error)
+- [x] Check wrong implementation in header file (eliminatory error)
