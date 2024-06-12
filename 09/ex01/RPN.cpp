@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 11:40:15 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/19 11:57:31 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/12 09:43:27 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ RPN &RPN::operator=(const RPN &rhs) {
     }
     return *this;
 }
+
+RPN::RPN(const RPN & cpy) { operator=(cpy); }
 
 void RPN::calculate(const std::string &input) {
     std::string::const_iterator it = input.begin();

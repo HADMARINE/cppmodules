@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:07:50 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/19 19:53:32 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/12 09:44:36 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
     PmergeMe();
 public:
     PmergeMe(int argc, char **argv);
-    PmergeMe(const PmergeMe &cpy) { operator=(cpy); };
+    PmergeMe(const PmergeMe &cpy);
     PmergeMe &operator=(const PmergeMe &);
     ~PmergeMe() {};
     

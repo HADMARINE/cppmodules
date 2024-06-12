@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:48:57 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/19 11:37:31 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/12 09:39:55 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,18 @@ BitcoinExchange::BitcoinExchange() {
     std::ifstream file("data.csv");
     std::string line;
     std::string key;
+    std::string valueStr;
     float value;
+    std::getline(file, line);
+    if (file.bad() || file.eof() || line.substr(0, line.find(',')) != "date" || line.substr(line.find(',') + 1) != "exchange_rate") {
+        throw std::runtime_error("Wrong file format");
+    }
     while (std::getline(file, line)) {
         key = line.substr(0, line.find(','));
-        value = std::atof(line.substr(line.find(',') + 1).c_str());
+        valueStr = line.substr(line.find(',') + 1);
+        if (key.empty() || valueStr.empty())
+            std::cerr << "Bad input line, ignoring..." << std::endl;
+        value = std::atof(valueStr.c_str());
         _data[key] = value;
     }
 }
@@ -49,7 +57,7 @@ void BitcoinExchange::readData(const std::string & file) {
     float value;
     std::getline(f, line);
     if (line != "date | value") {
-        std::cout << "Error: file format is not correct." << std::endl;
+        std::cerr << "Error: file format is not correct." << std::endl;
         return;
     }
     while (std::getline(f, line)) {

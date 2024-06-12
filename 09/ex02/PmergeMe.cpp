@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:07:38 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/19 20:07:36 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/12 09:44:30 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ PmergeMe & PmergeMe::operator=(const PmergeMe &rhs) {
     }
     return *this;
 }
+
+PmergeMe::PmergeMe(const PmergeMe & cpy) { operator=(cpy); };
 
 void PmergeMe::sortDeque(std::deque<int>& arr)
 {
