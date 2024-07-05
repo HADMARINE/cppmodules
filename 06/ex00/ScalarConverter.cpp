@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:07:40 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 10:47:29 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 22:47:22 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+
+ScalarConverter::ScalarConverter() {}
 
 const char *ScalarConverter::getTypeName(t_type type) {
     switch (type) {
@@ -25,8 +27,6 @@ const char *ScalarConverter::getTypeName(t_type type) {
             return "float";
         case TYPE_DOUBLE:
             return "double";
-        case TYPE_NAN:
-            return "nan";
         default:
             return "unknown";
     }

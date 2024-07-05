@@ -14,7 +14,7 @@
 
 int main()
 {
-    DiamondTrap trap("Diamond Trap 1");
+    DiamondTrap trap("Diamond_Trap_1");
     trap.whoAmI();
     trap.attack("Enemy 1");
     // trap.takeDamage(10);

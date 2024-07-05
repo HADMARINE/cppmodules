@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:12:44 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 16:56:58 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:28:42 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
     RobotomyRequestForm();
 public:
     RobotomyRequestForm(const std::string & target);
-    RobotomyRequestForm(const RobotomyRequestForm & cpy) : AForm(cpy.getName(), cpy.getTarget(), cpy.getGradeToSign(), cpy.getGradeToExecute()) { operator=(cpy); };
+    RobotomyRequestForm(const RobotomyRequestForm & cpy);
     ~RobotomyRequestForm();
     RobotomyRequestForm & operator=(const RobotomyRequestForm &);
 

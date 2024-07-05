@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:06:17 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 15:18:08 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 15:53:46 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog() : Animal("Dog") {
     brain = new Brain();
 }
 
-Dog::Dog(const Dog &copy) {
+Dog::Dog(const Dog &copy) : Animal(copy) {
     operator=(copy);
 }
 

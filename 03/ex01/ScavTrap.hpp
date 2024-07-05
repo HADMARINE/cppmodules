@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 21:37:20 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/05 21:44:04 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/07/05 15:43:10 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ public:
     ScavTrap(const ScavTrap& scav_trap);
     ScavTrap& operator=(const ScavTrap& scav_trap);
     
+    void attack(const std::string & target);
     void guardGate();
-    void setIsGuardMode(bool isGuardMode);
-    bool getIsGuardMode() const;
-private:
-    bool isGuardMode;
 };

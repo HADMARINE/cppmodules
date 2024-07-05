@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 17:47:00 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/05 21:40:30 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 12:54:34 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ public:
     void attack(const std::string & target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
-private:
+protected:
     std::string name;
     int hit_points;
     int energy_points;

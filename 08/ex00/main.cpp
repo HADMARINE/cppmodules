@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 13:00:52 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 15:42:10 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 22:57:30 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main() {
     try {
         int val = easyfind(v, 1);
         std::cout << "found : " << val << std::endl;
+        easyfind(v, 3);
     } catch (std::exception &e) {
         (void)e;
         std::cout << "not found" << std::endl;

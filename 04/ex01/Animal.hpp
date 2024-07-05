@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:57:48 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 15:12:58 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 16:00:04 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
     virtual ~Animal();
     Animal &operator=(const Animal &);
     
-    void makeSound() const;
+    virtual void makeSound() const;
 protected:
     std::string type;
 };

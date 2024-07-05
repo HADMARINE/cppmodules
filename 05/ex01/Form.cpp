@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:46:20 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 15:33:06 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:32:57 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Form::Form(const std::string & name, int gradeToSign, int gradeToExecute) : _sig
 }
 
 Form::~Form() {}
+
+Form::Form(const Form & cpy) { operator=(cpy); };
 
 Form & Form::operator=(const Form & cpy) {
     if (this == &cpy)
@@ -63,3 +65,11 @@ std::ostream & operator<<(std::ostream &o, const Form &form) {
     o << "Grade to execute:\t\t" << form.getGradeToExecute() << std::endl;
     return (o);
 }
+
+const std::string & Form::getName(void) const { return (_name); };
+
+bool Form::getSigned(void) const { return (_signed); };
+
+unsigned short Form::getGradeToSign(void) const { return (_gradeToSign); };
+
+unsigned short Form::getGradeToExecute(void) const { return (_gradeToExecute); };

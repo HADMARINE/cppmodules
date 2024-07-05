@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:34:06 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 16:56:30 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:40:01 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", "defau
 RobotomyRequestForm::RobotomyRequestForm(const std::string & target) : AForm("RobotomyRequestForm", target, 72, 45) {};
 
 RobotomyRequestForm::~RobotomyRequestForm() {};
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & cpy) : AForm(cpy.getName(), cpy.getTarget(), cpy.getGradeToSign(), cpy.getGradeToExecute()) { operator=(cpy); };
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm & cpy) {
     (void)cpy;

@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:37:30 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/09 15:34:12 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 19:32:44 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ private:
 public:
     Form();
     Form(const std::string & name, const int gradeToSign, const int gradeToExecute);
-    Form(const Form & cpy) { operator=(cpy); };
+    Form(const Form & cpy);
     Form & operator=(const Form & cpy);
     ~Form();
     
-    const std::string & getName(void) const { return (_name); };
-    bool getSigned(void) const { return (_signed); };
-    unsigned short getGradeToSign(void) const { return (_gradeToSign); };
-    unsigned short getGradeToExecute(void) const { return (_gradeToExecute); };
-
+    const std::string & getName(void) const;
+    bool getSigned(void) const;
+    unsigned short getGradeToSign(void) const;
+    unsigned short getGradeToExecute(void) const;
+    
     void beSigned(const Bureaucrat & bureaucrat);
 
     class GradeTooHighException : public std::exception {

@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:06:17 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 14:15:02 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 13:11:30 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog() : Animal("Dog") {}
 
-Dog::Dog(const Dog &copy) {
+Dog::Dog(const Dog &copy) : Animal(copy) {
     operator=(copy);
 }
 

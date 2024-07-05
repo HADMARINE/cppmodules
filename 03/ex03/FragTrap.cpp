@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 12:05:16 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 13:57:06 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 12:59:15 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ FragTrap::FragTrap(const std::string & name) : ClapTrap(name, 100, 50, 20), high
     DMSG("FragTrap name constructor");
 }
 
-FragTrap::FragTrap(const FragTrap & frag_trap)
+FragTrap::FragTrap(const FragTrap & frag_trap) : ClapTrap(frag_trap)
 {
     DMSG("FragTrap copy constructor");
     operator=(frag_trap);

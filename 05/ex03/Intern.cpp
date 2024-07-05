@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:00:06 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 10:04:24 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/06/11 20:16:33 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ Intern & Intern::operator=(const Intern & cpy) {
         return (*this);
     return (*this);
 }
+
+Intern::Intern(const Intern & cpy) { operator=(cpy); };
 
 static AForm * createPresidentialPardonForm(const std::string & target) {
     return (new PresidentialPardonForm(target));
@@ -45,8 +47,11 @@ AForm * Intern::makeForm(const std::string & request, const std::string & target
     for (int i = 0; i < 3; i++) {
         if (lst[i] == request) {
             return func[i](target);
-            
         }
     }
-    return (NULL);
+    throw FormNotExistError();
+}
+
+const char * Intern::FormNotExistError::what() const throw() {
+    return "Intern does not have a capacity to treat this form";
 }
