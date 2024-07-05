@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 21:36:41 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 13:55:19 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/07/05 15:00:36 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main()
     // trap.takeDamage(10);
     // trap.beRepaired(10);
     // trap.guardGate();
+    trap.highFiveGuys();
+    trap.highFiveGuys();
     trap.highFiveGuys();
     return (0);
 }
