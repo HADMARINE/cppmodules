@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:47:18 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/11 17:03:22 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/09/30 15:26:40 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,12 @@ AMateria * MateriaSource::createMateria(std::string const & type)
     else if (type == "cure")
         materia = new Cure();
     return (materia);
+}
+
+MateriaSource::~MateriaSource() {
+    for (int i = 0; i < 4; i++)
+    {
+        if (materias[i])
+            delete materias[i];
+    }
 }

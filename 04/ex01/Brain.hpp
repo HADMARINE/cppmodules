@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:07:27 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 15:11:17 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/07/10 12:48:46 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BRAIN_HPP
 
 #include <string>
+#include "Animal.hpp"
 
 class Brain
 {

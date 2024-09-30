@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 16:03:29 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/11 17:07:00 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/09/30 15:27:07 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Character::Character() : _name("default"), _count(0) {
         _materia[i] = NULL;
 }
 
-Character::Character(std::string const & name) : _name(name) {
+Character::Character(std::string const & name) : _name(name), _count(0) {
     for (int i = 0; i < 4; i++)
         _materia[i] = NULL;
 }
@@ -31,6 +31,7 @@ Character & Character::operator=(const Character &copy) {
     if (this == &copy)
         return (*this);
     _name = copy._name;
+    _count = copy._count;
     for (unsigned int i = 0; i < 4; i++)
     {
         if (i <= _count)
@@ -86,3 +87,11 @@ void Character::use(int idx, ICharacter &target)
 }
 
 std::string const & Character::getName() const { return (_name); }
+
+Character::~Character() {
+    for (unsigned int i = 0; i < 4; i++)
+    {
+        if (_materia[i] != NULL)
+            delete _materia[i];
+    }
+}

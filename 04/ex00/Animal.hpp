@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:57:48 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/11 15:51:33 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/07/09 22:08:29 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 
 #include <string>
 #include <iostream>
+
+#define DEBUG
+
+#ifdef DEBUG
+
+#define DMSG(x) std::cout << x << std::endl
+
+#else
+
+#define DMSG(x)
+
+#endif
 
 class Animal
 {

@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:43:56 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/11 17:02:55 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/09/30 15:25:54 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 public:
     MateriaSource();
     MateriaSource(const MateriaSource &copy);
-    ~MateriaSource() {};
+    ~MateriaSource();
     MateriaSource &operator=(const MateriaSource &);
     void learnMateria(AMateria *);
     AMateria *createMateria(std::string const &);

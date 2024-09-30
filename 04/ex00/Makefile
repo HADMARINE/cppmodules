@@ -6,7 +6,7 @@
 #    By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/05 17:33:34 by lhojoon           #+#    #+#              #
-#    Updated: 2024/04/08 14:14:24 by lhojoon          ###   ########.fr        #
+#    Updated: 2024/07/09 22:46:28 by lhojoon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ INCLUDES = -I.
 
 all: $(NAME)
 $(NAME): $(OBJS)
-	$(CPP) $(OBJS) $(DEBUG) -o $(NAME)
+	$(CPP) $(CFLAGS) $(OBJS) $(DEBUG) -o $(NAME)
 clean:
 	rm $(OBJS) -f
 fclean: clean
@@ -37,4 +37,4 @@ fclean: clean
 re: fclean all
 
 %.o: %.cpp
-	$(CPP) -c $< -o $@ $(CFLAGS) $(INCLUDES) $(DEBUG)
+	$(CPP) $(CFLAGS) $(DEBUG) -c $< -o $@ $(INCLUDES)

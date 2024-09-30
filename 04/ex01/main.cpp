@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:15:19 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/11 16:00:24 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/09/30 15:12:52 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 
 int main()
 {
+    {
+        // Testing copy constructor
+        Dog basic;
+        {
+            Dog tmp = basic;
+        }
+    }
+    
     Animal *animals[100];
     for (int i = 0; i < 100; i++)
     {

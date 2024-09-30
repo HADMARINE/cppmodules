@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:07:45 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/08 14:15:44 by lhojoon          ###   ########.fr       */
+/*   Updated: 2024/09/30 15:09:40 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ public:
     WrongCat();
     WrongCat(const WrongCat &);
     virtual ~WrongCat();
+    void makeSound() const;
 };
 
 #endif
