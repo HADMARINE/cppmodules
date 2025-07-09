@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:49:01 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/12 00:54:11 by lhojoon          ###   ########.fr       */
+/*   Updated: 2025/07/09 14:41:41 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ public:
     int longestSpan();
 
     class MaxCapacityReachedException : public std::exception {
-        virtual const char * what() throw();
+        virtual char const * what() const throw();
     };
 
     class ElementAlreadyExistException : public std::exception {
-        virtual const char * what() throw();
+        virtual char const * what() const throw();
     };
 
     class RangeInvalidException : public std::exception {
-        virtual const char * what() throw();
+        virtual char const * what() const throw();
     };
 };
 

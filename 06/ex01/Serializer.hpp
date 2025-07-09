@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 10:42:58 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/04/15 11:09:55 by lhojoon          ###   ########.fr       */
+/*   Updated: 2025/07/09 14:34:25 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class Serializer {
 private:
     Serializer() {};
-    Serializer(const Serializer & cpy) { operator=(cpy); };
+    Serializer(const Serializer & cpy);
     ~Serializer() {};
-    Serializer & operator=(const Serializer & cpy) { *this = cpy; return (*this); };
+    Serializer & operator=(const Serializer & cpy);
 public:
     static uintptr_t serialize(Data *ptr);
     static Data * deserialize(uintptr_t raw);

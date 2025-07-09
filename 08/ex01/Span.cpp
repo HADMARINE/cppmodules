@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:47:04 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/12 00:53:58 by lhojoon          ###   ########.fr       */
+/*   Updated: 2025/07/09 14:41:49 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ Span::Span() : _arr(std::vector<int>(0)), _len(0), _max_len(0) {}
 
 Span::Span(size_t n) : _arr(std::vector<int>(n)), _len(0), _max_len(n) {}
 
-Span::Span(const Span & cpy) { operator=(cpy); }
+Span::Span(const Span & copy) {
+    _arr = copy._arr;
+    _len = copy._len;
+    _max_len = copy._max_len;
+}
 
 Span::~Span() {}
 
@@ -62,14 +66,14 @@ int Span::longestSpan() {
     return *std::max_element(_arr.begin(), _arr.end()) - *std::min_element(_arr.begin(), _arr.end());
 }
 
-const char * Span::ElementAlreadyExistException::what() throw() {
+char const * Span::ElementAlreadyExistException::what() const throw() {
     return "Element already exists";
 }
 
-const char * Span::MaxCapacityReachedException::what() throw() {
+char const * Span::MaxCapacityReachedException::what() const throw() {
     return "Max capacity reached";
 }
 
-const char * Span::RangeInvalidException::what() throw() {
+char const * Span::RangeInvalidException::what() const throw() {
     return "Range invalid";
 }

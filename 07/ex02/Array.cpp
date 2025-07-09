@@ -1,30 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.cpp                                     :+:      :+:    :+:   */
+/*   Array.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 10:43:23 by lhojoon           #+#    #+#             */
-/*   Updated: 2025/07/09 14:34:45 by lhojoon          ###   ########.fr       */
+/*   Created: 2025/06/29 15:18:27 by lhojoon           #+#    #+#             */
+/*   Updated: 2025/07/09 14:45:14 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
-
-uintptr_t Serializer::serialize(Data *ptr) {
-    return (reinterpret_cast<uintptr_t>(ptr));
-}
-
-Data *Serializer::deserialize(uintptr_t raw) {
-    return (reinterpret_cast<Data *>(raw));
-}
-
-Serializer & Serializer::operator=(const Serializer & cpy) {
-    (void)cpy;
-    return (*this);
-}
-
-Serializer::Serializer(const Serializer & cpy) {
-    (void)cpy;
-}
+#include "./Array.hpp"
