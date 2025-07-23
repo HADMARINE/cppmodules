@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:04:33 by lhojoon           #+#    #+#             */
-/*   Updated: 2024/06/12 00:51:53 by lhojoon          ###   ########.fr       */
+/*   Updated: 2025/07/23 15:01:05 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ public:
     virtual ~MutantStack() {}
 
     MutantStack &operator=(const MutantStack &mutantStack) {
-        if (this == &mutantStack) { return *this; }
-        std::stack<T>::operator=(mutantStack);
+        if (this != &mutantStack)
+            this->c = mutantStack.c;
         return *this;
     }
 

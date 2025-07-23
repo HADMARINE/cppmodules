@@ -6,7 +6,7 @@
 /*   By: lhojoon <lhojoon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:49:01 by lhojoon           #+#    #+#             */
-/*   Updated: 2025/07/09 14:41:41 by lhojoon          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:50:34 by lhojoon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,13 @@ public:
     Span &operator=(const Span &copy);
     
     void addNumber(int n);
-    void addNumber(std::vector<int>::iterator start, std::vector<int>::iterator end);
+    template <typename Iter>
+    void addNumber(Iter start, Iter end)
+    {
+        for (; start != end; ++start) {
+            addNumber(*start);
+        }
+    }
     int shortestSpan();
     int longestSpan();
 
